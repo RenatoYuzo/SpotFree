@@ -26,7 +26,10 @@ public class LoginActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Login!", Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(LoginActivity.this, ListaMusicasActivity.class);
+                startActivity(i);
+
             }
         });
     }
