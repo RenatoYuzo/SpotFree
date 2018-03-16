@@ -3,7 +3,6 @@ package br.com.spotfree.spotfree.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
@@ -17,11 +16,9 @@ import br.com.spotfree.spotfree.R;
 
 public class LoginActivity extends Activity {
 
-
-
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
         Button btnLogin = findViewById(R.id.btnLogin);
