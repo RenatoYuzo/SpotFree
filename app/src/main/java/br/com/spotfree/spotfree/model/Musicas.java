@@ -6,7 +6,7 @@ package br.com.spotfree.spotfree.model;
 
 public class Musicas {
 
-    private Integer id;
+    private long id;
     private String nome;
     private String artista;
     private Double duracao;
@@ -44,7 +44,7 @@ public class Musicas {
         this.imagem = imagem;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
