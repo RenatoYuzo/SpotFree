@@ -1,16 +1,27 @@
 package br.com.spotfree.spotfree.model;
 
+import java.io.Serializable;
+
 /**
  * Created by re_ja on 15/03/2018.
  */
 
-public class Musicas {
+public class Musicas implements Serializable{
 
     private long id;
     private String nome;
     private String artista;
-    private Double duracao;
+    private String duracao;
     private String imagem;
+    private String tag;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 
     public String getNome() {
         return nome;
@@ -28,11 +39,11 @@ public class Musicas {
         this.artista = artista;
     }
 
-    public Double getDuracao() {
+    public String getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(Double duracao) {
+    public void setDuracao(String duracao) {
         this.duracao = duracao;
     }
 

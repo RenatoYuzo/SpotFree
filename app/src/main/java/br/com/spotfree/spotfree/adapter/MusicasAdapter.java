@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -46,11 +47,23 @@ public class MusicasAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = raiz.getLayoutInflater().inflate(R.layout.item_lista_musicas, parent, false);
 
+        Musicas current = listaMusicas.get(position);
+
         TextView nomeDaMusica = v.findViewById(R.id.textViewNomeDaMusicaListaMusicas);
         TextView nomeDoArtista = v.findViewById(R.id.textViewNomeDoArtistaListaMusicas);
+        ImageView imagemAlbum = v.findViewById(R.id.imageViewImagemListaMusicas);
 
-        nomeDaMusica.setText(listaMusicas.get(position).getNome());
-        nomeDoArtista.setText(listaMusicas.get(position).getArtista());
+        nomeDaMusica.setText(current.getNome());
+        nomeDoArtista.setText(current.getArtista());
+
+        if (current.getTag().equals("aero"))
+            imagemAlbum.setImageResource(R.drawable.aerosmith);
+        else if (current.getTag().equals("ff"))
+            imagemAlbum.setImageResource(R.drawable.foofighters);
+        else if (current.getTag().equals("lp"))
+            imagemAlbum.setImageResource(R.drawable.linkinpark);
+        else if (current.getTag().equals("gnr"))
+            imagemAlbum.setImageResource(R.drawable.gunsnroses);
 
         return v;
     }
